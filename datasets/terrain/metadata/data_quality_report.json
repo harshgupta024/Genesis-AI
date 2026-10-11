@@ -1,0 +1,50 @@
+{
+    "dataset_name": "terrain",
+    "filename": "terrain_features.csv",
+    "generated_at": "2026-08-14T15:04:40.808716",
+    "row_count": 100,
+    "column_count": 6,
+    "duplicate_rows": 0,
+    "columns": {
+        "region": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "latitude": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": 36.18,
+            "max": 39.120000000000005
+        },
+        "longitude": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -116.82,
+            "max": -79.98
+        },
+        "elevation_m": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -84.767501831,
+            "max": 2979.152832031
+        },
+        "slope_deg": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": 0.0,
+            "max": 40.07234348981287
+        },
+        "aspect_deg": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": 1.5023644316979068,
+            "max": 359.08366114297075
+        }
+    }
+}

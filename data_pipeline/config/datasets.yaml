@@ -1,0 +1,105 @@
+climate:
+  source: "NOAA GSOM"
+  official_url: "https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-month"
+  download_method: "api"
+  start_year: 1990
+  end_year: 2025
+  station_count: 100
+  geographic_scope: "Global diverse sample"
+  max_expected_size_mb: 50
+  target_output: "climate_training.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_climate.py"
+  license: "Public Domain"
+
+population:
+  source: "World Bank"
+  official_url: "https://datacatalog.worldbank.org/infrastructure-data/search/dataset/0037655/population-estimates-and-projections"
+  download_method: "bulk_csv"
+  start_year: 1960
+  end_year: 2050
+  geographic_scope: "Global"
+  max_expected_size_mb: 100
+  target_output: "population_training.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_population.py"
+  license: "CC BY 4.0"
+
+terrain:
+  source: "USGS The National Map / NASA SRTM"
+  official_url: "https://www.usgs.gov/the-national-map-data-delivery/gis-data-download"
+  download_method: "api_or_tile"
+  geographic_scope: "Representative sample regions"
+  max_expected_size_mb: 200
+  target_output: "terrain_features.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_terrain.py"
+  license: "Public Domain"
+
+economy:
+  source: "World Bank WDI"
+  official_url: "https://datacatalog.worldbank.org/search/dataset/0037712/world-development-indicators"
+  download_method: "bulk_csv"
+  start_year: 1960
+  end_year: 2024
+  geographic_scope: "Global"
+  max_expected_size_mb: 150
+  target_output: "economic_training.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_economy.py"
+  license: "CC BY 4.0"
+
+biodiversity:
+  source: "GBIF"
+  official_url: "https://www.gbif.org/"
+  download_method: "api_filtered"
+  geographic_scope: "Global sample"
+  max_expected_size_mb: 200
+  target_output: "species_training.csv"
+  required_credentials: ["GBIF_USERNAME", "GBIF_PASSWORD", "GBIF_EMAIL"]
+  preprocessing_script: "preprocess_biodiversity.py"
+  license: "CC BY 4.0 / CC0"
+
+earth_observation:
+  source: "NASA Earthdata"
+  official_url: "https://search.earthdata.nasa.gov/"
+  download_method: "api"
+  geographic_scope: "Representative tiles"
+  max_expected_size_mb: 200
+  target_output: "environment_training.csv"
+  required_credentials: ["NASA_EARTHDATA_USERNAME", "NASA_EARTHDATA_PASSWORD"]
+  preprocessing_script: "preprocess_earth_observation.py"
+  license: "Public Domain"
+
+health:
+  source: "WHO GHO"
+  official_url: "https://www.who.int/data/gho"
+  download_method: "api_athena"
+  geographic_scope: "Global"
+  max_expected_size_mb: 20
+  target_output: "health_training.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_health.py"
+  license: "CC BY-NC-SA 3.0 IGO"
+
+geography:
+  source: "Natural Earth / USGS"
+  official_url: "https://www.naturalearthdata.com/"
+  download_method: "bulk_zip"
+  geographic_scope: "Global boundaries and masks"
+  max_expected_size_mb: 100
+  target_output: "land_water_reference.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_geography.py"
+  license: "Public Domain"
+
+resources:
+  source: "USGS Mineral / World Bank"
+  official_url: "https://www.usgs.gov/"
+  download_method: "bulk_csv"
+  geographic_scope: "Global"
+  max_expected_size_mb: 50
+  target_output: "resource_reference.csv"
+  required_credentials: []
+  preprocessing_script: "preprocess_resources.py"
+  license: "Public Domain"

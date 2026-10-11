@@ -1,0 +1,62 @@
+{
+    "dataset_name": "population",
+    "filename": "population_training.csv",
+    "generated_at": "2026-08-14T15:04:40.797411",
+    "row_count": 23700,
+    "column_count": 8,
+    "duplicate_rows": 0,
+    "columns": {
+        "Country Code": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "Country Name": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "Year": {
+            "type": "int64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": 1960.0,
+            "max": 2050.0
+        },
+        "Birth_Rate": {
+            "type": "float64",
+            "missing_values": 5460,
+            "percentage_missing": 23.04,
+            "min": 3.417,
+            "max": 57.613
+        },
+        "Death_Rate": {
+            "type": "float64",
+            "missing_values": 5460,
+            "percentage_missing": 23.04,
+            "min": 0.841,
+            "max": 153.963
+        },
+        "Life_Expectancy": {
+            "type": "float64",
+            "missing_values": 5464,
+            "percentage_missing": 23.05,
+            "min": 10.989,
+            "max": 89.486
+        },
+        "Population_Total": {
+            "type": "float64",
+            "missing_values": 5,
+            "percentage_missing": 0.02,
+            "min": 2715.0,
+            "max": 9629542589.0
+        },
+        "Population_Urban": {
+            "type": "float64",
+            "missing_values": 5,
+            "percentage_missing": 0.02,
+            "min": 692.0,
+            "max": 6473625658.0
+        }
+    }
+}

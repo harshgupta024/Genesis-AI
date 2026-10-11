@@ -1,0 +1,12 @@
+# Data Pipeline
+.env*
+!.env.example
+datasets/*/raw/
+*.zip
+*.tar.gz
+*.tif
+*.tiff
+
+# Generated dependencies and build output
+node_modules/
+dist/

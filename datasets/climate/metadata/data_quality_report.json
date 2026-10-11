@@ -1,0 +1,606 @@
+{
+    "dataset_name": "climate",
+    "filename": "climate_training.csv",
+    "generated_at": "2026-08-14T15:04:40.605957",
+    "row_count": 17478,
+    "column_count": 96,
+    "duplicate_rows": 0,
+    "columns": {
+        "STATION": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "DATE": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "LATITUDE": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -85.2,
+            "max": 35.1
+        },
+        "LONGITUDE": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -178.8058,
+            "max": 178.5592
+        },
+        "ELEVATION": {
+            "type": "float64",
+            "missing_values": 315,
+            "percentage_missing": 1.8,
+            "min": 0.0,
+            "max": 4084.0
+        },
+        "NAME": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "AWND": {
+            "type": "float64",
+            "missing_values": 17276,
+            "percentage_missing": 98.84,
+            "min": 1.9,
+            "max": 8.0
+        },
+        "AWND_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 17276,
+            "percentage_missing": 98.84
+        },
+        "CDSD": {
+            "type": "float64",
+            "missing_values": 13812,
+            "percentage_missing": 79.03,
+            "min": 0.0,
+            "max": 3714.3
+        },
+        "CDSD_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 13875,
+            "percentage_missing": 79.39
+        },
+        "CLDD": {
+            "type": "float64",
+            "missing_values": 12215,
+            "percentage_missing": 69.89,
+            "min": 0.0,
+            "max": 534.0
+        },
+        "CLDD_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 12215,
+            "percentage_missing": 69.89
+        },
+        "DP01": {
+            "type": "float64",
+            "missing_values": 5701,
+            "percentage_missing": 32.62,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DP01_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 5701,
+            "percentage_missing": 32.62
+        },
+        "DP10": {
+            "type": "float64",
+            "missing_values": 5701,
+            "percentage_missing": 32.62,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DP10_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 5701,
+            "percentage_missing": 32.62
+        },
+        "DP1X": {
+            "type": "float64",
+            "missing_values": 5701,
+            "percentage_missing": 32.62,
+            "min": 0.0,
+            "max": 19.0
+        },
+        "DP1X_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 5701,
+            "percentage_missing": 32.62
+        },
+        "DSND": {
+            "type": "float64",
+            "missing_values": 16399,
+            "percentage_missing": 93.83,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DSND_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16399,
+            "percentage_missing": 93.83
+        },
+        "DSNW": {
+            "type": "float64",
+            "missing_values": 16497,
+            "percentage_missing": 94.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        "DSNW_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16497,
+            "percentage_missing": 94.39
+        },
+        "DT00": {
+            "type": "float64",
+            "missing_values": 9696,
+            "percentage_missing": 55.48,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DT00_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 9696,
+            "percentage_missing": 55.48
+        },
+        "DT32": {
+            "type": "float64",
+            "missing_values": 9696,
+            "percentage_missing": 55.48,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DT32_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 9696,
+            "percentage_missing": 55.48
+        },
+        "DX32": {
+            "type": "float64",
+            "missing_values": 8061,
+            "percentage_missing": 46.12,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DX32_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 8061,
+            "percentage_missing": 46.12
+        },
+        "DX70": {
+            "type": "float64",
+            "missing_values": 8061,
+            "percentage_missing": 46.12,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DX70_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 8061,
+            "percentage_missing": 46.12
+        },
+        "DX90": {
+            "type": "float64",
+            "missing_values": 8061,
+            "percentage_missing": 46.12,
+            "min": 0.0,
+            "max": 31.0
+        },
+        "DX90_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 8061,
+            "percentage_missing": 46.12
+        },
+        "DYFG": {
+            "type": "float64",
+            "missing_values": 17459,
+            "percentage_missing": 99.89,
+            "min": 1.0,
+            "max": 13.0
+        },
+        "DYFG_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "DYHF": {
+            "type": "float64",
+            "missing_values": 17477,
+            "percentage_missing": 99.99,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "DYHF_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "DYNT": {
+            "type": "float64",
+            "missing_values": 9696,
+            "percentage_missing": 55.48,
+            "min": 19900101.0,
+            "max": 20251231.0
+        },
+        "DYNT_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 9696,
+            "percentage_missing": 55.48
+        },
+        "DYSD": {
+            "type": "float64",
+            "missing_values": 16399,
+            "percentage_missing": 93.83,
+            "min": 19900131.0,
+            "max": 20251031.0
+        },
+        "DYSD_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16399,
+            "percentage_missing": 93.83
+        },
+        "DYSN": {
+            "type": "float64",
+            "missing_values": 16497,
+            "percentage_missing": 94.39,
+            "min": 19900131.0,
+            "max": 20161130.0
+        },
+        "DYSN_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16497,
+            "percentage_missing": 94.39
+        },
+        "DYTS": {
+            "type": "float64",
+            "missing_values": 17349,
+            "percentage_missing": 99.26,
+            "min": 1.0,
+            "max": 8.0
+        },
+        "DYTS_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "DYXP": {
+            "type": "float64",
+            "missing_values": 5701,
+            "percentage_missing": 32.62,
+            "min": 19900101.0,
+            "max": 20251231.0
+        },
+        "DYXP_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 5701,
+            "percentage_missing": 32.62
+        },
+        "DYXT": {
+            "type": "float64",
+            "missing_values": 8061,
+            "percentage_missing": 46.12,
+            "min": 19900101.0,
+            "max": 20251231.0
+        },
+        "DYXT_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 8061,
+            "percentage_missing": 46.12
+        },
+        "EMNT": {
+            "type": "float64",
+            "missing_values": 9696,
+            "percentage_missing": 55.48,
+            "min": -79.2,
+            "max": 30.5
+        },
+        "EMNT_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 9696,
+            "percentage_missing": 55.48
+        },
+        "EMSD": {
+            "type": "float64",
+            "missing_values": 16399,
+            "percentage_missing": 93.83,
+            "min": 0.0,
+            "max": 1509.0
+        },
+        "EMSD_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16399,
+            "percentage_missing": 93.83
+        },
+        "EMSN": {
+            "type": "float64",
+            "missing_values": 16497,
+            "percentage_missing": 94.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        "EMSN_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16497,
+            "percentage_missing": 94.39
+        },
+        "EMXP": {
+            "type": "float64",
+            "missing_values": 5701,
+            "percentage_missing": 32.62,
+            "min": 0.0,
+            "max": 395.5
+        },
+        "EMXP_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 5701,
+            "percentage_missing": 32.62
+        },
+        "EMXT": {
+            "type": "float64",
+            "missing_values": 8061,
+            "percentage_missing": 46.12,
+            "min": -62.4,
+            "max": 50.0
+        },
+        "EMXT_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 8061,
+            "percentage_missing": 46.12
+        },
+        "HDSD": {
+            "type": "float64",
+            "missing_values": 13707,
+            "percentage_missing": 78.42,
+            "min": 0.0,
+            "max": 24408.4
+        },
+        "HDSD_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 13758,
+            "percentage_missing": 78.72
+        },
+        "HTDD": {
+            "type": "float64",
+            "missing_values": 12215,
+            "percentage_missing": 69.89,
+            "min": 0.0,
+            "max": 2669.7
+        },
+        "HTDD_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 12215,
+            "percentage_missing": 69.89
+        },
+        "PRCP": {
+            "type": "float64",
+            "missing_values": 5674,
+            "percentage_missing": 32.46,
+            "min": 0.0,
+            "max": 1331.8
+        },
+        "PRCP_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 5674,
+            "percentage_missing": 32.46
+        },
+        "PSUN": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "PSUN_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "SNOW": {
+            "type": "float64",
+            "missing_values": 16497,
+            "percentage_missing": 94.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        "SNOW_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 16497,
+            "percentage_missing": 94.39
+        },
+        "TAVG": {
+            "type": "float64",
+            "missing_values": 11678,
+            "percentage_missing": 66.82,
+            "min": -67.98,
+            "max": 36.62
+        },
+        "TAVG_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 11678,
+            "percentage_missing": 66.82
+        },
+        "TMAX": {
+            "type": "float64",
+            "missing_values": 8061,
+            "percentage_missing": 46.12,
+            "min": -67.15,
+            "max": 45.12
+        },
+        "TMAX_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 8061,
+            "percentage_missing": 46.12
+        },
+        "TMIN": {
+            "type": "float64",
+            "missing_values": 9696,
+            "percentage_missing": 55.48,
+            "min": -70.82,
+            "max": 32.09
+        },
+        "TMIN_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 9696,
+            "percentage_missing": 55.48
+        },
+        "TSUN": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "TSUN_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WDF1": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WDF1_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WDFG": {
+            "type": "float64",
+            "missing_values": 17245,
+            "percentage_missing": 98.67,
+            "min": 30.0,
+            "max": 360.0
+        },
+        "WDFG_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 17245,
+            "percentage_missing": 98.67
+        },
+        "WDFM": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WDFM_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WSF1": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WSF1_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WSFG": {
+            "type": "float64",
+            "missing_values": 17245,
+            "percentage_missing": 98.67,
+            "min": 7.2,
+            "max": 56.8
+        },
+        "WSFG_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 17245,
+            "percentage_missing": 98.67
+        },
+        "WSFM": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "WSFM_ATTRIBUTES": {
+            "type": "float64",
+            "missing_values": 17478,
+            "percentage_missing": 100.0,
+            "min": null,
+            "max": null
+        },
+        "STATION_LATITUDE": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -85.2,
+            "max": 35.1
+        },
+        "STATION_LONGITUDE": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -178.8058,
+            "max": 178.5592
+        },
+        "STATION_ELEVATION_M": {
+            "type": "float64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": -999.9,
+            "max": 4084.0
+        },
+        "STATION_NAME_META": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "WDF2": {
+            "type": "float64",
+            "missing_values": 17450,
+            "percentage_missing": 99.84,
+            "min": 30.0,
+            "max": 350.0
+        },
+        "WDF2_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 17450,
+            "percentage_missing": 99.84
+        },
+        "WSF2": {
+            "type": "float64",
+            "missing_values": 17450,
+            "percentage_missing": 99.84,
+            "min": 7.6,
+            "max": 92.5
+        },
+        "WSF2_ATTRIBUTES": {
+            "type": "object",
+            "missing_values": 17450,
+            "percentage_missing": 99.84
+        }
+    }
+}

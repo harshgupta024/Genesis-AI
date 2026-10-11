@@ -1,0 +1,62 @@
+{
+    "dataset_name": "economy",
+    "filename": "economic_training.csv",
+    "generated_at": "2026-08-14T15:04:40.700756",
+    "row_count": 3182,
+    "column_count": 8,
+    "duplicate_rows": 0,
+    "columns": {
+        "Country_Code": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "Country_Name": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "Year": {
+            "type": "int64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": 2004.0,
+            "max": 2025.0
+        },
+        "Electric_Consumption_kWh_Per_Capita": {
+            "type": "float64",
+            "missing_values": 911,
+            "percentage_missing": 28.63,
+            "min": 5.44159121873369,
+            "max": 55085.1684476218
+        },
+        "GDP_Growth_Pct": {
+            "type": "float64",
+            "missing_values": 73,
+            "percentage_missing": 2.29,
+            "min": -36.3919770983887,
+            "max": 63.3346343654855
+        },
+        "GDP_Per_Capita_USD": {
+            "type": "float64",
+            "missing_values": 56,
+            "percentage_missing": 1.76,
+            "min": 125.194965184533,
+            "max": 142250.433195123
+        },
+        "GDP_USD": {
+            "type": "float64",
+            "missing_values": 56,
+            "percentage_missing": 1.76,
+            "min": 104085892.133271,
+            "max": 118350166039396.0
+        },
+        "Inflation_Pct": {
+            "type": "float64",
+            "missing_values": 331,
+            "percentage_missing": 10.4,
+            "min": -10.0674925768978,
+            "max": 219.883929014578
+        }
+    }
+}

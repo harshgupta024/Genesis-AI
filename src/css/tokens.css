@@ -1,0 +1,251 @@
+/* ============================================================
+   GENESIS — Design Tokens
+   Planetary Research Laboratory — Observatory Aesthetic
+   ============================================================ */
+
+:root {
+  /* ── Backgrounds — Deep graphite, warm undertone ────────── */
+  --bg-primary: #0a0c10;
+  --bg-secondary: #111318;
+  --bg-tertiary: #181b22;
+  --bg-elevated: #1e222b;
+  --bg-surface: #13161c;
+  --bg-hover: rgba(255, 255, 255, 0.035);
+  --bg-active: rgba(255, 255, 255, 0.06);
+
+  /* ── Instrument Panels — Matte science surfaces ─────────── */
+  --surface-instrument: rgba(255, 255, 255, 0.02);
+  --surface-instrument-hover: rgba(255, 255, 255, 0.04);
+  --surface-instrument-strong: rgba(255, 255, 255, 0.06);
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-bg-hover: rgba(255, 255, 255, 0.04);
+  --glass-bg-strong: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(255, 255, 255, 0.10);
+  --glass-blur: 16px;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --glass-shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.45);
+
+  /* ── Primary Accent — Terra Cotta / Copper ──────────────── */
+  --accent-primary: #c47a5a;
+  --accent-primary-hover: #b36a4a;
+  --accent-primary-light: #d4967a;
+  --accent-primary-dim: rgba(196, 122, 90, 0.12);
+  --accent-primary-glow: rgba(196, 122, 90, 0.3);
+  --accent-primary-subtle: rgba(196, 122, 90, 0.06);
+
+  /* Legacy aliases for components that reference old names */
+  --accent-blue: #c47a5a;
+  --accent-blue-hover: #b36a4a;
+  --accent-blue-light: #d4967a;
+  --accent-blue-dim: rgba(196, 122, 90, 0.12);
+  --accent-blue-glow: rgba(196, 122, 90, 0.3);
+  --accent-blue-subtle: rgba(196, 122, 90, 0.06);
+
+  /* ── Secondary Accent — Sage / Geological Green ─────────── */
+  --accent-secondary: #7a9e8e;
+  --accent-secondary-hover: #6a8e7e;
+  --accent-secondary-light: #96b8a8;
+  --accent-secondary-dim: rgba(122, 158, 142, 0.12);
+  --accent-secondary-glow: rgba(122, 158, 142, 0.3);
+
+  /* Legacy aliases */
+  --accent-cyan: #7a9e8e;
+  --accent-cyan-hover: #6a8e7e;
+  --accent-cyan-light: #96b8a8;
+  --accent-cyan-dim: rgba(122, 158, 142, 0.12);
+  --accent-cyan-glow: rgba(122, 158, 142, 0.3);
+
+  /* ── Data / Instrument — Steel Blue ─────────────────────── */
+  --accent-data: #8ba5b8;
+  --accent-data-dim: rgba(139, 165, 184, 0.12);
+  --accent-data-light: #a4bdd0;
+
+  /* ── Semantic Colors — Muted, Scientific ────────────────── */
+  --success: #6b9e7a;
+  --success-hover: #5a8e6a;
+  --success-dim: rgba(107, 158, 122, 0.12);
+  --success-glow: rgba(107, 158, 122, 0.3);
+
+  --warning: #c4a35a;
+  --warning-hover: #b3933a;
+  --warning-dim: rgba(196, 163, 90, 0.12);
+  --warning-glow: rgba(196, 163, 90, 0.3);
+
+  --danger: #b85c5c;
+  --danger-hover: #a04c4c;
+  --danger-dim: rgba(184, 92, 92, 0.12);
+  --danger-glow: rgba(184, 92, 92, 0.3);
+
+  --info: #8ba5b8;
+  --info-hover: #7a95a8;
+  --info-dim: rgba(139, 165, 184, 0.12);
+  --info-glow: rgba(139, 165, 184, 0.3);
+
+  /* ── Gradients — Warm, Scientific ───────────────────────── */
+  --gradient-primary: linear-gradient(135deg, #c47a5a, #a85a3a);
+  --gradient-warm: linear-gradient(135deg, #c47a5a, #7a9e8e);
+  --gradient-sage: linear-gradient(135deg, #7a9e8e, #6b9e7a);
+  --gradient-data: linear-gradient(135deg, #8ba5b8, #7a9e8e);
+  --gradient-radial-warm: radial-gradient(circle at 50% 50%, rgba(196, 122, 90, 0.08), transparent 70%);
+  --gradient-radial-sage: radial-gradient(circle at 50% 50%, rgba(122, 158, 142, 0.06), transparent 70%);
+  --gradient-hero: linear-gradient(180deg, #0a0c10 0%, #111318 50%, #0a0c10 100%);
+  --gradient-card-shine: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 50%);
+
+  /* Legacy aliases for JS components referencing old gradient names */
+  --gradient-blue-cyan: linear-gradient(135deg, #c47a5a, #a85a3a);
+  --gradient-blue-purple: linear-gradient(135deg, #c47a5a, #8ba5b8);
+  --gradient-cyan-emerald: linear-gradient(135deg, #7a9e8e, #6b9e7a);
+  --gradient-purple-pink: linear-gradient(135deg, #8ba5b8, #c47a5a);
+
+  /* ── Text — Warmer tones ────────────────────────────────── */
+  --text-primary: #e8e4e0;
+  --text-secondary: #9a9590;
+  --text-muted: #6b6660;
+  --text-disabled: #4a4540;
+  --text-inverse: #0a0c10;
+  --text-accent: #d4967a;
+  --text-gradient: linear-gradient(135deg, #c47a5a, #7a9e8e);
+
+  /* ── Typography — Observatory Stack ─────────────────────── */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-display: 4rem;
+  --text-h1: 2.5rem;
+  --text-h2: 2rem;
+  --text-h3: 1.5rem;
+  --text-h4: 1.25rem;
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+  --text-2xs: 0.625rem;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  --tracking-ultra: 0.2em;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Borders — Warm tinted ──────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.04);
+  --border-default: 1px solid rgba(255, 255, 255, 0.07);
+  --border-strong: 1px solid rgba(255, 255, 255, 0.12);
+  --border-instrument: 1px solid rgba(196, 122, 90, 0.08);
+
+  /* ── Shadows — Warm, deep ──────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.45);
+  --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.55);
+  --shadow-glow-warm: 0 0 20px rgba(196, 122, 90, 0.2);
+  --shadow-glow-sage: 0 0 20px rgba(122, 158, 142, 0.2);
+  --shadow-glow-data: 0 0 20px rgba(139, 165, 184, 0.2);
+
+  /* Legacy glow aliases */
+  --shadow-glow-blue: 0 0 20px rgba(196, 122, 90, 0.2);
+  --shadow-glow-cyan: 0 0 20px rgba(122, 158, 142, 0.2);
+  --shadow-glow-purple: 0 0 20px rgba(139, 165, 184, 0.2);
+
+  /* ── Z-Index ─────────────────────────────────────────────── */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sidebar: 300;
+  --z-topbar: 400;
+  --z-modal-backdrop: 500;
+  --z-modal: 600;
+  --z-popover: 700;
+  --z-command-palette: 800;
+  --z-toast: 900;
+  --z-tooltip: 1000;
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --duration-fast: 150ms;
+  --duration-default: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-page: 500ms;
+
+  --transition-colors: color var(--duration-default) var(--ease-default),
+                       background-color var(--duration-default) var(--ease-default),
+                       border-color var(--duration-default) var(--ease-default);
+  --transition-transform: transform var(--duration-default) var(--ease-default);
+  --transition-opacity: opacity var(--duration-default) var(--ease-default);
+  --transition-all: all var(--duration-default) var(--ease-default);
+  --transition-shadow: box-shadow var(--duration-default) var(--ease-default);
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --topbar-height: 56px;
+  --content-max-width: 1400px;
+  --grid-columns: 12;
+  --grid-gap: 1.5rem;
+
+  /* ── Breakpoints (for reference — used in media queries) ── */
+  /* Mobile: 375px */
+  /* Tablet: 768px */
+  /* Desktop: 1024px */
+  /* Wide: 1280px */
+  /* Ultra: 1536px */
+}
+
+/* ── Reduced Motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-default: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+    --duration-page: 0ms;
+  }
+}

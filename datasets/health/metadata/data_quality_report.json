@@ -1,0 +1,50 @@
+{
+    "dataset_name": "health",
+    "filename": "health_training.csv",
+    "generated_at": "2026-08-14T15:04:40.749947",
+    "row_count": 13512,
+    "column_count": 6,
+    "duplicate_rows": 0,
+    "columns": {
+        "Country": {
+            "type": "object",
+            "missing_values": 0,
+            "percentage_missing": 0.0
+        },
+        "Year": {
+            "type": "int64",
+            "missing_values": 0,
+            "percentage_missing": 0.0,
+            "min": 1931.0,
+            "max": 2025.0
+        },
+        "Basic_Drinking_Water_Access_Pct": {
+            "type": "float64",
+            "missing_values": 8461,
+            "percentage_missing": 62.62,
+            "min": 0.0,
+            "max": 99.0
+        },
+        "Basic_Sanitation_Access_Pct": {
+            "type": "float64",
+            "missing_values": 8461,
+            "percentage_missing": 62.62,
+            "min": 19.0,
+            "max": 99.0
+        },
+        "Infant_Mortality_Rate": {
+            "type": "float64",
+            "missing_values": 217,
+            "percentage_missing": 1.61,
+            "min": 1.2563208216666666,
+            "max": 780.8729053806668
+        },
+        "Life_Expectancy_At_Birth": {
+            "type": "float64",
+            "missing_values": 9442,
+            "percentage_missing": 69.88,
+            "min": 40.160811136666666,
+            "max": 84.63881812333334
+        }
+    }
+}
