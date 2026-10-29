@@ -87,7 +87,7 @@ export function renderDashboard() {
             <a href="#/world-builder" class="section-action">+ Create World</a>
           </div>
           <div class="grid grid-cols-2" style="gap:var(--space-4)">
-            ${worlds.slice(0, 4).map(w => `
+            ${[...worlds].sort((a, b) => (b.created || '').localeCompare(a.created || '') || (b.id.length - a.id.length) || b.id.localeCompare(a.id)).slice(0, 4).map(w => `
               <div class="card world-card hover-lift" style="padding:var(--space-4)">
                 <div class="world-preview" style="height:110px;background:linear-gradient(135deg, ${w.color}15, ${w.color}05);display:flex;align-items:center;justify-content:center;position:relative">
                   <div style="width:55px;height:55px;border-radius:50%;background:radial-gradient(circle at 35% 35%, ${w.color}80, ${w.color}30);box-shadow:0 0 25px ${w.color}40;"></div>

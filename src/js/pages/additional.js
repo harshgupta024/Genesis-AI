@@ -1,6 +1,6 @@
 /* ============================================================
    GENESIS AI — Additional Pages
-   Comparison, Timeline, Datasets, Models, Admin, Settings, Auth
+   Comparison, Timeline, Datasets, Models, Auth
    ============================================================ */
 
 import { icon } from '../icons.js';
@@ -26,19 +26,6 @@ const mlModels = [
   { name: 'ResourceClassifier', type: 'Classification', accuracy: 96.1, status: 'active', params: '22M', training: 'Complete' },
   { name: 'DisasterDetect', type: 'Anomaly Detection', accuracy: 88.3, status: 'active', params: '35M', training: 'Complete' },
 ];
-
-const adminData = {
-  users: [
-    { name: 'Dr. Sarah Chen', email: 'sarah@genesis.ai', role: 'Admin', status: 'active', worlds: 3 },
-    { name: 'Marcus Rivera', email: 'marcus@genesis.ai', role: 'Researcher', status: 'active', worlds: 5 },
-    { name: 'Dr. Aisha Patel', email: 'aisha@genesis.ai', role: 'Scientist', status: 'active', worlds: 2 },
-    { name: 'James Mitchell', email: 'james@genesis.ai', role: 'Engineer', status: 'inactive', worlds: 1 },
-    { name: 'Li Wei', email: 'li@genesis.ai', role: 'Student', status: 'active', worlds: 4 },
-  ],
-  systemHealth: {
-    cpu: 42, memory: 67, storage: 38, gpu: 85, uptime: '99.97%', latency: '12ms',
-  },
-};
 
 /* ── SCENARIO COMPARISON ──────────────────────────────────── */
 export function renderComparison() {
@@ -193,6 +180,14 @@ export function initTimeline() {
 
 /* ── DATASET MANAGER ──────────────────────────────────────── */
 export function renderDatasets() {
+  const datasets = (loadedDatasets && loadedDatasets.length > 0) ? loadedDatasets : [
+    { name: 'Climate (NOAA GSOM)', source: 'NOAA', type: 'Time Series', size: '5.3 MB', records: '17,478', columns: 96, status: 'ready', category: 'climate' },
+    { name: 'World Development & Population', source: 'World Bank', type: 'Time Series', size: '10.3 KB', records: '23,700', columns: 4, status: 'ready', category: 'population' },
+    { name: 'Global Economic Indicators & GDP', source: 'World Bank', type: 'Time Series', size: '2.5 KB', records: '14,800', columns: 5, status: 'ready', category: 'economy' },
+    { name: 'Global Health & Life Expectancy', source: 'WHO / World Bank', type: 'Time Series', size: '6.7 KB', records: '19,200', columns: 6, status: 'ready', category: 'health' },
+    { name: 'Shuttle Radar Topography (SRTM)', source: 'NASA JPL', type: 'Raster / Grid', size: '5.5 KB', records: '100', columns: 5, status: 'ready', category: 'terrain' },
+  ];
+
   return `
     <div class="page-container">
       <div class="page-header">
@@ -283,12 +278,19 @@ export function renderDatasets() {
 }
 
 export function initDatasets() {
+  const dsList = (loadedDatasets && loadedDatasets.length > 0) ? loadedDatasets : [
+    { name: 'Climate (NOAA GSOM)', source: 'NOAA', records: '17,478' },
+    { name: 'World Development & Population', source: 'World Bank', records: '23,700' },
+    { name: 'Global Economic Indicators & GDP', source: 'World Bank', records: '14,800' },
+    { name: 'Global Health & Life Expectancy', source: 'WHO / World Bank', records: '19,200' },
+    { name: 'Shuttle Radar Topography (SRTM)', source: 'NASA JPL', records: '100' },
+  ];
   // Compute aggregate stats
-  const totalRecords = loadedDatasets.reduce((sum, d) => {
+  const totalRecords = dsList.reduce((sum, d) => {
     const num = parseInt(String(d.records).replace(/,/g, ''), 10);
     return sum + (isNaN(num) ? 0 : num);
   }, 0);
-  const sources = new Set(loadedDatasets.map(d => d.source).filter(Boolean));
+  const sources = new Set(dsList.map(d => d.source).filter(Boolean));
 
   const totalEl = document.getElementById('ds-total-records');
   if (totalEl) totalEl.textContent = totalRecords.toLocaleString();
@@ -397,156 +399,6 @@ export function renderModels() {
             ` : ''}
           </div>
         `).join('')}
-      </div>
-    </div>
-  `;
-}
-
-/* ── ADMIN DASHBOARD ──────────────────────────────────────── */
-export function renderAdmin() {
-  const { users, systemHealth } = adminData;
-  return `
-    <div class="page-container">
-      <div class="page-header">
-        <div class="page-header-left">
-          <h1 class="page-title">Admin Dashboard</h1>
-          <p class="page-subtitle">System administration and user management</p>
-        </div>
-      </div>
-
-      <!-- System Health -->
-      <div class="grid grid-cols-6 section">
-        ${[
-          { label: 'CPU', value: systemHealth.cpu, color: 'blue' },
-          { label: 'Memory', value: systemHealth.memory, color: 'cyan' },
-          { label: 'Storage', value: systemHealth.storage, color: 'green' },
-          { label: 'GPU', value: systemHealth.gpu, color: 'purple' },
-          { label: 'Uptime', value: systemHealth.uptime, color: 'green', text: true },
-          { label: 'Latency', value: systemHealth.latency, color: 'blue', text: true },
-        ].map(m => `
-          <div class="card" style="padding:var(--space-4);text-align:center">
-            <span style="font-size:var(--text-2xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em">${m.label}</span>
-            ${m.text ? `
-              <div style="font-size:var(--text-h4);font-weight:700;margin-top:var(--space-1);color:var(--success)">${m.value}</div>
-            ` : `
-              <div style="font-size:var(--text-h4);font-weight:700;margin-top:var(--space-1);color:${m.value > 80 ? 'var(--warning)' : 'var(--text-primary)'}">${m.value}%</div>
-              <div class="progress-bar" style="margin-top:var(--space-2);height:4px">
-                <div class="progress-bar-fill" style="width:${m.value}%;background:var(--${m.value > 80 ? 'warning' : m.color === 'blue' ? 'accent-blue' : m.color === 'cyan' ? 'accent-cyan' : m.color === 'green' ? 'success' : 'info'})"></div>
-              </div>
-            `}
-          </div>
-        `).join('')}
-      </div>
-
-      <!-- Users Table -->
-      <div class="section-header">
-        <h3 class="section-title">Users</h3>
-        <button class="btn btn-primary btn-sm">${icon('plus', 14)} Add User</button>
-      </div>
-      <div class="table-wrapper">
-        <table class="table">
-          <thead>
-            <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Worlds</th><th></th></tr>
-          </thead>
-          <tbody>
-            ${users.map(u => `
-              <tr>
-                <td>
-                  <div class="flex items-center gap-3">
-                    <div class="sidebar-avatar" style="width:28px;height:28px;font-size:10px">${u.name.split(' ').map(n=>n[0]).join('')}</div>
-                    <strong style="color:var(--text-primary)">${u.name}</strong>
-                  </div>
-                </td>
-                <td style="color:var(--text-muted);font-size:var(--text-sm)">${u.email}</td>
-                <td><span class="badge badge-blue">${u.role}</span></td>
-                <td><span class="badge badge-${u.status === 'active' ? 'green' : 'red'}"><span class="badge-dot"></span> ${u.status}</span></td>
-                <td style="font-variant-numeric:tabular-nums">${u.worlds}</td>
-                <td><button class="btn-icon">${icon('moreHorizontal', 16)}</button></td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  `;
-}
-
-/* ── SETTINGS ─────────────────────────────────────────────── */
-export function renderSettings() {
-  return `
-    <div class="page-container">
-      <div class="page-header">
-        <div class="page-header-left">
-          <h1 class="page-title">Settings</h1>
-          <p class="page-subtitle">Manage your account and preferences</p>
-        </div>
-      </div>
-
-      <div class="settings-layout">
-        <nav class="settings-nav">
-          ${[
-            { label: 'Profile', icon: 'user', active: true },
-            { label: 'Preferences', icon: 'settings' },
-            { label: 'Notifications', icon: 'bell' },
-            { label: 'Keyboard Shortcuts', icon: 'command' },
-            { label: 'API Keys', icon: 'shield' },
-          ].map(item => `
-            <div class="settings-nav-item ${item.active ? 'active' : ''}">
-              ${icon(item.icon, 18)} ${item.label}
-            </div>
-          `).join('')}
-        </nav>
-
-        <div class="settings-section">
-          <h3 class="settings-section-title">Profile Settings</h3>
-          <div class="settings-row">
-            <div class="settings-row-info">
-              <div class="settings-row-label">Display Name</div>
-              <div class="settings-row-desc">Your name as shown throughout the platform</div>
-            </div>
-            <input class="input" style="width:260px" value="Harsh Gupta" />
-          </div>
-          <div class="settings-row">
-            <div class="settings-row-info">
-              <div class="settings-row-label">Email Address</div>
-              <div class="settings-row-desc">Used for notifications and authentication</div>
-            </div>
-            <input class="input" style="width:260px" value="harsh@genesis.ai" />
-          </div>
-          <div class="settings-row">
-            <div class="settings-row-info">
-              <div class="settings-row-label">Role</div>
-              <div class="settings-row-desc">Your access level on the platform</div>
-            </div>
-            <span class="badge badge-blue" style="padding:6px 14px">Researcher</span>
-          </div>
-          <div class="settings-row">
-            <div class="settings-row-info">
-              <div class="settings-row-label">Dark Mode</div>
-              <div class="settings-row-desc">Toggle dark mode appearance</div>
-            </div>
-            <label class="toggle">
-              <input type="checkbox" checked />
-              <span class="toggle-track"></span>
-              <span class="toggle-thumb"></span>
-            </label>
-          </div>
-          <div class="settings-row">
-            <div class="settings-row-info">
-              <div class="settings-row-label">Reduced Motion</div>
-              <div class="settings-row-desc">Minimize animations throughout the UI</div>
-            </div>
-            <label class="toggle">
-              <input type="checkbox" />
-              <span class="toggle-track"></span>
-              <span class="toggle-thumb"></span>
-            </label>
-          </div>
-          <div style="margin-top:var(--space-6);display:flex;gap:var(--space-3)">
-            <button class="btn btn-primary">Save Changes</button>
-            <button class="btn btn-ghost">Cancel</button>
-          </div>
-        </div>
       </div>
     </div>
   `;

@@ -12,8 +12,6 @@ const breadcrumbMap = {
   '#/timeline': ['Analysis', 'Timeline Explorer'],
   '#/datasets': ['Data', 'Datasets'],
   '#/models': ['Data', 'Models'],
-  '#/admin': ['System', 'Admin Dashboard'],
-  '#/settings': ['System', 'Settings'],
 };
 
 export function renderTopbar(path) {

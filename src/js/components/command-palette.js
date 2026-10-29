@@ -18,10 +18,6 @@ const commands = [
     { label: 'Run Simulation', icon: 'play', action: '#/simulation', shortcut: 'R' },
     { label: 'Generate Prediction', icon: 'sparkles', action: '#/predictions', shortcut: 'P' },
   ]},
-  { group: 'Settings', items: [
-    { label: 'User Settings', icon: 'settings', action: '#/settings', shortcut: ',' },
-    { label: 'Admin Dashboard', icon: 'shield', action: '#/admin', shortcut: '' },
-  ]},
 ];
 
 export function renderCommandPalette() {

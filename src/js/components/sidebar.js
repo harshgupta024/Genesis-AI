@@ -23,10 +23,6 @@ const navItems = [
     { id: 'datasets', label: 'Datasets', icon: 'database', path: '#/datasets' },
     { id: 'models', label: 'Models', icon: 'cpu', path: '#/models' },
   ]},
-  { section: 'System', items: [
-    { id: 'admin', label: 'Admin', icon: 'shield', path: '#/admin' },
-    { id: 'settings', label: 'Settings', icon: 'settings', path: '#/settings' },
-  ]},
 ];
 
 export function renderSidebar(activePath) {

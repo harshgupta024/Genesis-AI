@@ -34,8 +34,6 @@ import {
   renderTimeline, initTimeline,
   renderDatasets, initDatasets,
   renderModels,
-  renderAdmin,
-  renderSettings,
   renderAuth,
 } from './js/pages/additional.js';
 
@@ -45,7 +43,7 @@ const app = document.getElementById('app');
 const shellPages = new Set([
   '#/dashboard', '#/world-builder', '#/viewer', '#/simulation',
   '#/predictions', '#/analytics', '#/comparison', '#/timeline',
-  '#/datasets', '#/models', '#/admin', '#/settings',
+  '#/datasets', '#/models',
 ]);
 
 // Full-page layouts (no shell)
@@ -148,14 +146,6 @@ function navigateTo(path) {
       renderShell(path, renderModels());
       break;
 
-    case '#/admin':
-      renderShell(path, renderAdmin());
-      break;
-
-    case '#/settings':
-      renderShell(path, renderSettings());
-      break;
-
     default:
       renderShell('#/dashboard', renderDashboard());
       requestAnimationFrame(() => initDashboard());
@@ -166,7 +156,7 @@ function navigateTo(path) {
 [
   '/', '#/', '#/dashboard', '#/world-builder', '#/viewer', '#/simulation',
   '#/predictions', '#/analytics', '#/comparison', '#/timeline',
-  '#/datasets', '#/models', '#/admin', '#/settings', '#/auth',
+  '#/datasets', '#/models', '#/auth',
 ].forEach(path => {
   router.register(path, () => navigateTo(path));
 });
